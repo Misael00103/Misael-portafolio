@@ -1,0 +1,29 @@
+{
+  "name": "misael-portafolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "gsap": "^3.12.5",
+    "i18next": "^24.1.0",
+    "i18next-browser-languagedetector": "^8.0.2",
+    "lenis": "^1.1.18",
+    "preact": "^10.25.0",
+    "prop-types": "^15.8.1",
+    "react-i18next": "^15.2.0",
+    "tailwind-scrollbar": "^3.1.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.1"
+  }
+}
