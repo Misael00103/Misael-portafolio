@@ -40,7 +40,7 @@ const Hero = () => {
                     label="Download CV"
                     icon="download"
                     target="_blank"
-                    href="./images/Misael-CV-Updated-EN.pdf"
+                    href="./images/CV UPDATE Misael Matos.pdf"
                     />
 
                     <ButtonOutline

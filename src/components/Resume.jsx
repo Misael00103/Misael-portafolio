@@ -22,7 +22,7 @@ const Resume = () => {
                 <li className="relative">
                   <div className="absolute -left-[30px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
                   <h4 className="font-semibold text-lg">University Dominican O&M</h4>
-                  <span className="text-sm text-sky-300">2020 — 2024</span>
+                  <span className="text-sm text-sky-300">2020 — 2025</span>
                   <p className="mt-2 text-sm">
                     Specialized in databases, web applications, and business administration.
                   </p>
