@@ -24,9 +24,7 @@ const ReviewCard = ({ content, imgSrc, name, company }) => {
           </span>
         ))}
       </div>
-
       <p className="text-zinc-400 mb-8">{content}</p>
-
       <div className="flex items-center gap-2 mt-auto">
         <figure className="img-box rounded-lg">
           <img
@@ -38,7 +36,6 @@ const ReviewCard = ({ content, imgSrc, name, company }) => {
             className="img-cover"
           />
         </figure>
-
         <div>
           <p>{name}</p>
           <p className="text-xs text-zinc-400">{company}</p>

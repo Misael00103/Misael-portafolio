@@ -4,40 +4,35 @@
  */
 
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
-const SkillCard = ({
-    imgSrc,
-    label, 
-    desc,
-    classes
-}) => {
-    return(
-        <div className={'flex items-center gap-3 ring-2 ring-inset ring-zinc-50/10 rounded-2xl p-3 hover:bg-zinc-800 transition-colors group ' + classes}>
-            <figure className="bg-zinc-700/50 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-zinc-900 transition-colors">
-                <img 
-                src={imgSrc} 
-                width={32}
-                height={32}
-                alt={label}
-                />
-            </figure>
+const SkillCard = ({ imgSrc, label, desc, classes }) => {
+  const { t } = useTranslation();
 
-            <div>
-                <h3>{label}</h3>
+  return (
+    <div
+      className={
+        "flex items-center gap-3 ring-2 ring-inset ring-zinc-50/10 rounded-2xl p-3 hover:bg-zinc-800 transition-colors group " +
+        classes
+      }
+    >
+      <figure className="bg-zinc-700/50 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-zinc-900 transition-colors">
+        <img src={imgSrc} width={32} height={32} alt={t(label)} />
+      </figure>
 
-                <p className="text-zinc-400 text-sm">
-                    {desc}
-                </p>
-            </div>
-        </div>
-    )
-}
+      <div>
+        <h3>{t(label)}</h3>
+        <p className="text-zinc-400 text-sm">{t(desc)}</p>
+      </div>
+    </div>
+  );
+};
 
-SkillCard.PropTypes = {
-    imgSrc: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    classes: PropTypes.string
-}
- 
+SkillCard.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  classes: PropTypes.string,
+};
+
 export default SkillCard;

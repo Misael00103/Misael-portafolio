@@ -1,101 +1,159 @@
+
 /**
  * @copyright 2024 codewithsadee
  * @license Apache-2.0
  */
 
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 const Resume = () => {
-    return (
-      <section id="resume" className="pt-20 lg:pt-32">
-        <div className="container reveal-up">
-          <h2 className="headline-2 text-center mb-10">Resume</h2>
-  
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {/* Education */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-rounded text-sky-400 text-2xl">
-                  school
-                </span>
-                <h3 className="title-1">Education</h3>
-              </div>
-              <ul className="relative border-l-2 border-zinc-600 space-y-10 pl-6">
-                <li className="relative">
-                  <div className="absolute -left-[30px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
-                  <h4 className="font-semibold text-lg">University Dominican O&M</h4>
-                  <span className="text-sm text-sky-300">2020 — 2025</span>
-                  <p className="mt-2 text-sm">
-                    Specialized in databases, web applications, and business administration.
-                  </p>
-                </li>
-                <li className="relative">
-                  <div className="absolute -left-[30px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
-                  <h4 className="font-semibold text-lg">
-                    National School of Arts and Crafts
-                  </h4>
-                  <span className="text-sm text-sky-300">2017 — 2019</span>
-                  <p className="mt-2 text-sm">
-                    Graduated as an advanced technician in industrial electricity.
-                  </p>
-                </li>
-              </ul>
+  const { t } = useTranslation();
+  const [expanded, setExpanded] = useState({});
+
+  const toggleExpand = (id) => {
+    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  return (
+    <section id="resume" className="pt-16 lg:pt-24">
+      <div className="container reveal-up animate__animated animate__fadeInUp">
+        {/* Información personal */}
+        <div className="mb-8 text-center animate__animated animate__fadeInUp animate__delay-1s">
+          <h3 className="text-xl font-semibold text-zinc-200">{t("resumePersonalInfo")}</h3>
+          <p className="mt-1 text-sm text-zinc-400">
+            Misael Matos<br />
+            {t("resumePhone")}: 184-940-96331<br />
+            {t("resumeEmail")}: <a href="mailto:beriguetemisael@gmail.com" className="text-sky-400 hover:underline">beriguetemisael@gmail.com</a>
+          </p>
+        </div>
+
+        {/* Objetivo */}
+        <div className="mb-8 animate__animated animate__fadeInUp animate__delay-2s">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">description</span>
+            <h3 className="title-1">{t("resumeObjective")}</h3>
+          </div>
+          <p className="text-sm text-zinc-400">{t("resumeObjectiveDesc")}</p>
+        </div>
+
+        {/* Educación y Experiencia */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Educación */}
+          <div className="animate__animated animate__fadeInUp animate__delay-3s">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">school</span>
+              <h3 className="title-1">{t("resumeEducation")}</h3>
             </div>
-  
-            {/* Experience */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-rounded text-sky-400 text-2xl">
-                  work
-                </span>
-                <h3 className="title-1">Experience</h3>
-              </div>
-              
-              <ul className="relative border-l-2 border-zinc-600 space-y-10 pl-6">
+            <ul className="relative border-l-2 border-zinc-600 space-y-6 pl-5">
               <li className="relative">
-                  <div className="absolute -left-[30px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
-                  <h4 className="font-semibold text-lg">
-                    Scape - UX/UI Designer
-                  </h4>
-                  <span className="text-sm text-sky-300">2024 — Current</span>
-                  <p className="mt-2 text-sm">
-                    Designed and developed the company's website, increasing user engagement by 70%.
-                    Designed and developed the company's app mobile, increasing user engagement by 100%.
-                  </p>
-                </li>
-                <li className="relative">
-                  <div className="absolute -left-[30px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
-                  <h4 className="font-semibold text-lg">
-                    Mayblue SHS - Software Developer
-                  </h4>
-                  <span className="text-sm text-sky-300">2025 — Current</span>
-                  <p className="mt-2 text-sm">
-                    Created HR systems using Ln4, supporting and updating reports and databases.
-                  </p>
-                </li>
-                <li className="relative">
-                  <div className="absolute -left-[30px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
-                  <h4 className="font-semibold text-lg">
-                    Altice Dominicana - Workforce
-                  </h4>
-                  <span className="text-sm text-sky-300">2022 — 2024</span>
-                  <p className="mt-2 text-sm">
-                    Worked on data analysis, generating dashboards, and optimizing data collection.
-                  </p>
-                </li>
-                <li className="relative">
-                  <div className="absolute -left-[30px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
-                  <h4 className="font-semibold text-lg">Web Developer - Freelancer</h4>
-                  <span className="text-sm text-sky-300">2020 — 2020</span>
-                  <p className="mt-2 text-sm">
-                    Developed a website with PHP, Laravel, and SQL Server, improving company productivity by 85%.
-                  </p>
-                </li>
+                <div className="absolute -left-[26px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
+                <h4 className="font-semibold text-base">{t("resumeEducation1")}</h4>
+                <span className="text-xs text-sky-300">{t("resumeEducation1Date")}</span>
+                <p className="mt-1 text-xs">{t("resumeEducation1Desc")}</p>
+              </li>
+              <li className="relative">
+                <div className="absolute -left-[26px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
+                <h4 className="font-semibold text-base">{t("resumeEducation2")}</h4>
+                <span className="text-xs text-sky-300">{t("resumeEducation2Date")}</span>
+                <p className="mt-1 text-xs">{t("resumeEducation2Desc")}</p>
+              </li>
+            </ul>
+          </div>
+
+          {/* Experiencia */}
+          <div className="animate__animated animate__fadeInUp animate__delay-4s">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">work</span>
+              <h3 className="title-1">{t("resumeExperience")}</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ul className="relative border-l-2 border-zinc-600 space-y-6 pl-5">
+                {["1", "2", "3", "4"].map((id) => (
+                  <li key={id} className="relative">
+                    <div className="absolute -left-[26px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-semibold text-base">{t(`resumeExperience${id}`)}</h4>
+                        <span className="text-xs text-sky-300">{t(`resumeExperience${id}Date`)}</span>
+                      </div>
+                      <button
+                        onClick={() => toggleExpand(id)}
+                        className="text-sky-400 hover:text-sky-300 focus:outline-none"
+                        aria-expanded={!!expanded[id]}
+                        aria-controls={`experience-desc-${id}`}
+                        aria-label={expanded[id] ? t("collapse") : t("expand")}
+                      >
+                        <span className="material-symbols-rounded text-xl">
+                          {expanded[id] ? "expand_less" : "expand_more"}
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      id={`experience-desc-${id}`}
+                      className={`mt-1 text-xs text-zinc-400 overflow-hidden transition-all duration-300 ease-in-out ${
+                        expanded[id] ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      {t(`resumeExperience${id}Desc`)}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <ul className="relative border-l-2 border-zinc-600 space-y-6 pl-5">
+                {["5", "6", "7", "8"].map((id) => (
+                  <li key={id} className="relative">
+                    <div className="absolute -left-[26px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-semibold text-base">{t(`resumeExperience${id}`)}</h4>
+                        <span className="text-xs text-sky-300">{t(`resumeExperience${id}Date`)}</span>
+                      </div>
+                      <button
+                        onClick={() => toggleExpand(id)}
+                        className="text-sky-400 hover:text-sky-300 focus:outline-none"
+                        aria-expanded={!!expanded[id]}
+                        aria-controls={`experience-desc-${id}`}
+                        aria-label={expanded[id] ? t("collapse") : t("expand")}
+                      >
+                        <span className="material-symbols-rounded text-xl">
+                          {expanded[id] ? "expand_less" : "expand_more"}
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      id={`experience-desc-${id}`}
+                      className={`mt-1 text-xs text-zinc-400 overflow-hidden transition-all duration-300 ease-in-out ${
+                        expanded[id] ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      {t(`resumeExperience${id}Desc`)}
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default Resume;
-  
+
+        {/* Trabajo voluntario */}
+        <div className="mt-8 animate__animated animate__fadeInUp animate__delay-5s">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">volunteer_activism</span>
+            <h3 className="title-1">{t("resumeVolunteerWork")}</h3>
+          </div>
+          <ul className="relative border-l-2 border-zinc-600 space-y-6 pl-5">
+            <li className="relative">
+              <div className="absolute -left-[26px] top-0 w-3 h-3 bg-sky-400 rounded-full"></div>
+              <h4 className="font-semibold text-base">{t("resumeVolunteer1")}</h4>
+              <span className="text-xs text-sky-300">{t("resumeVolunteer1Date")}</span>
+              <p className="mt-1 text-xs">{t("resumeVolunteer1Desc")}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Resume;
