@@ -170,7 +170,7 @@ const resources = {
       resumeEducation1Desc:
         "Universidad Dominicana O&M, Santo Domingo, República Dominicana. Promedio: 2.5 / 4.0. Completé una tesis y varios proyectos prácticos, incluyendo un sistema de inventario y una aplicación móvil personalizada para servicios de reparación. Especializado en desarrollo web, integración de APIs y diseño de sistemas.",
       resumeEducation2: "Bachillerato Técnico en Electricidad Industrial",
-      resumeEducation2Date: "Jun 2017 — Jun 2019",
+      resumeEducation2Date: "Jun 2017 — Jun 2019", 
       resumeEducation2Desc:
         "Escuela Nacional de Artes y Oficios, Santo Domingo, República Dominicana. Graduado con un certificado en dibujo eléctrico/electrónico.",
       resumeExperience1: "Desarrollador de Software - Mayblue SHS",
