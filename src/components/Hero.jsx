@@ -38,7 +38,7 @@ const Hero = () => {
               label={t("heroDownloadCV")}
               icon="download"
               target="_blank"
-              href={i18n.language === "en" ? "./images/CV-UPDATE-EN-Misael-Matos.pdf" : "./images/CV-UPDATE-ES-Misael-Matos.pdf"}
+              href={i18n.language === "en" ? "./images/Resume-EN-Misael-Matos.pdf" : "./images/Resume-EN-Misael-Matos.pdf"}
             />
             <ButtonOutline
               href="#about"

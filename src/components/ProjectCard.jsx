@@ -6,7 +6,7 @@
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
+const ProjectCard = ({ imgSrc, title, resume, tags, projectLink, classes }) => {
   const { t } = useTranslation();
 
   return (
@@ -23,6 +23,14 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
       <div className="flex items-center justify-between gap-4">
         <div>
           <h3 className="title-1 mb-3">{t(title)}</h3>
+          {resume && (
+            <p
+              className="text-sm text-zinc-400 mb-3 animate__animated animate__fadeIn animate__delay-1s"
+              id={`resume-${title}`}
+            >
+              {resume}
+            </p>
+          )}
           <div className="flex flex-wrap items-center gap-2">
             {tags.map((tagKey, key) => (
               <span
@@ -42,7 +50,14 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
         </div>
       </div>
 
-      <a href={projectLink} target="_blank" className="absolute inset-0" rel="noopener noreferrer"></a>
+      <a
+        href={projectLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute inset-0"
+        aria-label={t("viewProject")}
+        aria-describedby={resume ? `resume-${title}` : undefined}
+      ></a>
     </div>
   );
 };
@@ -50,6 +65,7 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
 ProjectCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  resume: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   projectLink: PropTypes.string,
   classes: PropTypes.string,

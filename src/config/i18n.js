@@ -1,3 +1,4 @@
+
 // src/config/i18n.js
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
@@ -44,7 +45,7 @@ const resources = {
       resumeEducation1Date: "2020 — Mar 2025",
       resumeEducation1Desc:
         "University Dominican O&M, Santo Domingo, Dominican Republic. GPA: 2.5 / 4.0. Completed a thesis and several practical projects, including an inventory system and a custom mobile app for repair services. Specialized in web development, API integration, and system design.",
-      resumeEducation2: "Bachelor of Industrial Electricity",
+      resumeEducation2: "Electrical/Electronics Drafting and CAD/CADD",
       resumeEducation2Date: "Jun 2017 — Jun 2019",
       resumeEducation2Desc:
         "National School of Arts and Crafts, Santo Domingo, Dominican Republic. Graduated with a certificate in electrical/electronics drafting.",
@@ -101,9 +102,11 @@ const resources = {
       instagram: "Instagram",
       codepen: "CodePen",
       project1Title: "System to Help Desk",
+      project1Resume: "Admin: username: admin | password: admin | User: username: user | password: user",
       project2Title: "Encryptor Challenge",
       project3Title: "Money Control",
-      project4Title: "Recipe Blog",
+      project4Title: "Inventory System",
+      project4Resume: "Email: demo@demo.com | Password: 123456",
       project5Title: "eCommerce Website",
       project6Title: "vCard Personal Portfolio",
       tagSQL: "SQL",
@@ -116,11 +119,14 @@ const resources = {
       tagAngular: "Angular",
       tagWebDesign: "Web Design",
       tagECommerce: "eCommerce",
+      viewProject: "View Project",
       languageEnglish: "English",
       languageSpanish: "Spanish",
       changeLanguage: "Change language",
       openMenu: "Open menu",
       closeMenu: "Close menu",
+      expand: "Expand description",
+      collapse: "Collapse description",
     },
   },
   es: {
@@ -163,7 +169,7 @@ const resources = {
       resumeEducation1Date: "2020 — Mar 2025",
       resumeEducation1Desc:
         "Universidad Dominicana O&M, Santo Domingo, República Dominicana. Promedio: 2.5 / 4.0. Completé una tesis y varios proyectos prácticos, incluyendo un sistema de inventario y una aplicación móvil personalizada para servicios de reparación. Especializado en desarrollo web, integración de APIs y diseño de sistemas.",
-      resumeEducation2: "Bachillerato en Electricidad Industrial",
+      resumeEducation2: "Dibujo Eléctrico/Electrónico y CAD/CADD",
       resumeEducation2Date: "Jun 2017 — Jun 2019",
       resumeEducation2Desc:
         "Escuela Nacional de Artes y Oficios, Santo Domingo, República Dominicana. Graduado con un certificado en dibujo eléctrico/electrónico.",
@@ -220,9 +226,11 @@ const resources = {
       instagram: "Instagram",
       codepen: "CodePen",
       project1Title: "Sistema para Mesa de Ayuda",
+      project1Resume: "Admin: usuario: admin | contraseña: admin | User: usuario: user | contraseña: user",
       project2Title: "Desafío Encriptador",
       project3Title: "Control de Dinero",
-      project4Title: "Blog de Recetas",
+      project4Title: "Sistema de Inventario",
+      project4Resume: "Email: demo@demo.com | Password: 123456",
       project5Title: "Sitio Web de Comercio Electrónico",
       project6Title: "Portafolio Personal vCard",
       tagSQL: "SQL",
@@ -235,11 +243,14 @@ const resources = {
       tagAngular: "Angular",
       tagWebDesign: "Diseño Web",
       tagECommerce: "Comercio Electrónico",
+      viewProject: "Ver Proyecto",
       languageEnglish: "Inglés",
       languageSpanish: "Español",
       changeLanguage: "Cambiar idioma",
       openMenu: "Abrir menú",
       closeMenu: "Cerrar menú",
+      expand: "Expandir descripción",
+      collapse: "Colapsar descripción",
     },
   },
 };

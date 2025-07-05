@@ -18,7 +18,6 @@ const Resume = () => {
   return (
     <section id="resume" className="pt-16 lg:pt-24">
       <div className="container reveal-up animate__animated animate__fadeInUp">
-        {/* Información personal */}
         <div className="mb-8 text-center animate__animated animate__fadeInUp animate__delay-1s">
           <h3 className="text-xl font-semibold text-zinc-200">{t("resumePersonalInfo")}</h3>
           <p className="mt-1 text-sm text-zinc-400">
@@ -28,7 +27,6 @@ const Resume = () => {
           </p>
         </div>
 
-        {/* Objetivo */}
         <div className="mb-8 animate__animated animate__fadeInUp animate__delay-2s">
           <div className="flex items-center gap-3 mb-4">
             <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">description</span>
@@ -37,9 +35,7 @@ const Resume = () => {
           <p className="text-sm text-zinc-400">{t("resumeObjectiveDesc")}</p>
         </div>
 
-        {/* Educación y Experiencia */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Educación */}
           <div className="animate__animated animate__fadeInUp animate__delay-3s">
             <div className="flex items-center gap-3 mb-4">
               <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">school</span>
@@ -61,7 +57,6 @@ const Resume = () => {
             </ul>
           </div>
 
-          {/* Experiencia */}
           <div className="animate__animated animate__fadeInUp animate__delay-4s">
             <div className="flex items-center gap-3 mb-4">
               <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">work</span>
@@ -136,7 +131,6 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Trabajo voluntario */}
         <div className="mt-8 animate__animated animate__fadeInUp animate__delay-5s">
           <div className="flex items-center gap-3 mb-4">
             <span className="material-symbols-rounded text-sky-400 text-2xl" aria-hidden="true">volunteer_activism</span>
