@@ -45,7 +45,7 @@ const resources = {
       resumeEducation1Date: "2020 — Mar 2025",
       resumeEducation1Desc:
         "University Dominican O&M, Santo Domingo, Dominican Republic. GPA: 2.5 / 4.0. Completed a thesis and several practical projects, including an inventory system and a custom mobile app for repair services. Specialized in web development, API integration, and system design.",
-      resumeEducation2: "Electrical/Electronics Drafting and CAD/CADD",
+      resumeEducation2: "Technical Baccalaureate in Industrial Electricity",
       resumeEducation2Date: "Jun 2017 — Jun 2019",
       resumeEducation2Desc:
         "National School of Arts and Crafts, Santo Domingo, Dominican Republic. Graduated with a certificate in electrical/electronics drafting.",
@@ -169,7 +169,7 @@ const resources = {
       resumeEducation1Date: "2020 — Mar 2025",
       resumeEducation1Desc:
         "Universidad Dominicana O&M, Santo Domingo, República Dominicana. Promedio: 2.5 / 4.0. Completé una tesis y varios proyectos prácticos, incluyendo un sistema de inventario y una aplicación móvil personalizada para servicios de reparación. Especializado en desarrollo web, integración de APIs y diseño de sistemas.",
-      resumeEducation2: "Dibujo Eléctrico/Electrónico y CAD/CADD",
+      resumeEducation2: "Bachillerato Técnico en Electricidad Industrial",
       resumeEducation2Date: "Jun 2017 — Jun 2019",
       resumeEducation2Desc:
         "Escuela Nacional de Artes y Oficios, Santo Domingo, República Dominicana. Graduado con un certificado en dibujo eléctrico/electrónico.",
